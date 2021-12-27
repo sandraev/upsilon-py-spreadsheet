@@ -26,7 +26,6 @@ def render(value,app):
       list_value = []
       for i in value:
         list_value.append(i)
-      print(list_value)
       cellx = 0
       celly = 0
       skip = False
@@ -46,7 +45,6 @@ def render(value,app):
           new_value += v
     else:
       new_value = value
-  print(new_value)
   if new_value[0] == "=":
     render(new_value,app)
   else:
