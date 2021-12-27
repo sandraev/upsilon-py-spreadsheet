@@ -47,7 +47,10 @@ def render(value,app):
     else:
       new_value = value
   print(new_value)
-  return new_value
+  if new_value[0] == "=":
+    render(new_value,app)
+  else:
+    return new_value
 
 class Button():
   def __init__(self,x,y,w,h,color,bgcolor):
